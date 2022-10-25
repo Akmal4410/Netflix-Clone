@@ -6,24 +6,35 @@ class CommonAppbar extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: kBackgroundColor,
-      title: Text(
-        title,
-        style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+          Row(
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.cast,
+                  size: 30,
+                  color: kWhite,
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(right: 10),
+                width: 30,
+                height: 30,
+                color: Colors.blue,
+              )
+            ],
+          )
+        ],
       ),
-      actions: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.cast, size: 30),
-        ),
-        Container(
-          margin: const EdgeInsets.only(right: 10),
-          width: 30,
-          height: 30,
-          color: Colors.blue,
-        )
-      ],
     );
   }
 }

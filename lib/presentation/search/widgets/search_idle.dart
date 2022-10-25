@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_project/core/colors.dart';
 import 'package:netflix_project/core/constants.dart';
-import 'package:netflix_project/presentation/search/widgets/search_text_title.dart';
+import 'package:netflix_project/presentation/widget/main_title.dart';
 
 const String imageUrl =
     'https://www.themoviedb.org/t/p/w500_and_h282_face/84XPpjGvxNyExjSuLQe0SzioErt.jpg';
@@ -17,7 +17,7 @@ class SearchIdle extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SearchTextTitle(
+        MainTitle(
           title: 'Top Searchs',
         ),
         kHeight,

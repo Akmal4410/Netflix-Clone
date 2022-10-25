@@ -17,7 +17,7 @@ class ScreenDownload extends StatelessWidget {
     return Scaffold(
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(50),
-          child: CommonAppbar(title: 'Downloads'),
+          child: SafeArea(child: CommonAppbar(title: 'Downloads')),
         ),
         body: ListView.separated(
           padding: const EdgeInsets.all(12),

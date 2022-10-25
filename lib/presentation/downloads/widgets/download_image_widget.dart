@@ -7,7 +7,7 @@ class DownloadImageWidget extends StatelessWidget {
     Key? key,
     required this.image,
     required this.margin,
-    required this.angle,
+    this.angle = 0,
     required this.size,
   }) : super(key: key);
 
