@@ -6,9 +6,13 @@ class CustomButton extends StatelessWidget {
     Key? key,
     required this.title,
     required this.icon,
+    this.titleSize = 18,
+    this.iconSize = 25,
   }) : super(key: key);
   final String title;
   final IconData icon;
+  final double titleSize;
+  final double iconSize;
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +21,11 @@ class CustomButton extends StatelessWidget {
         Icon(
           icon,
           color: kWhite,
-          size: 25,
+          size: iconSize,
         ),
         Text(
           title,
-          style: TextStyle(fontSize: 18),
+          style: TextStyle(fontSize: titleSize),
         ),
       ],
     );
