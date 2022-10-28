@@ -1,0 +1,6 @@
+import 'package:netflix_project/core/constant_strings.dart';
+import 'package:netflix_project/infrastructure/apikey.dart';
+
+class ApiEndPoints {
+  static const downloads = '$kBaseUrl/trending/all/day?api_key=$apiKey';
+}
