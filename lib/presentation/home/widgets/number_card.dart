@@ -1,7 +1,6 @@
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_project/core/colors.dart';
-import 'package:netflix_project/presentation/search/widgets/search_idle.dart';
 
 class NumberCard extends StatelessWidget {
   const NumberCard({
@@ -24,7 +23,7 @@ class NumberCard extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
             image: const DecorationImage(
-              image: NetworkImage(imageUrl),
+              image: NetworkImage(''),
               fit: BoxFit.cover,
             ),
           ),
