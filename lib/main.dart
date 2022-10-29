@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:netflix_project/application/downloads/downloads_bloc.dart';
 import 'package:netflix_project/application/search/search_bloc.dart';
 import 'package:netflix_project/core/colors.dart';
-import 'package:netflix_project/domain/core/di/injectable.dart';
+import 'package:netflix_project/domain/core/dependency_injection/injectable.dart';
 import 'package:netflix_project/presentation/main/screen_main.dart';
 
 void main() async {

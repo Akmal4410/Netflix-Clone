@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
-import 'package:netflix_project/domain/core/di/injectable.config.dart';
+import 'package:netflix_project/domain/core/dependency_injection/injectable.config.dart';
 
 final getIt = GetIt.instance;
 

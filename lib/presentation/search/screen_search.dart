@@ -1,16 +1,16 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflix_project/application/search/search_bloc.dart';
 import 'package:netflix_project/core/colors.dart';
 import 'package:netflix_project/core/constants.dart';
+import 'package:netflix_project/domain/core/debounce/debounce.dart';
 import 'package:netflix_project/presentation/search/widgets/search_idle.dart';
 import 'package:netflix_project/presentation/search/widgets/search_results.dart';
 
 class ScreenSearch extends StatelessWidget {
-  const ScreenSearch({super.key});
+  ScreenSearch({super.key});
+  final Debouncer _debouncer = Debouncer(milliseconds: 500);
 
   @override
   Widget build(BuildContext context) {
@@ -28,26 +28,37 @@ class ScreenSearch extends StatelessWidget {
             children: [
               CupertinoSearchTextField(
                 backgroundColor: kGrey.withOpacity(0.4),
-                prefixIcon: Icon(
+                prefixIcon: const Icon(
                   CupertinoIcons.search,
                   color: kGrey,
                 ),
-                suffixIcon: Icon(
+                suffixIcon: const Icon(
                   CupertinoIcons.xmark_circle_fill,
                   color: kGrey,
                 ),
-                style: TextStyle(color: kWhite),
+                style: const TextStyle(color: kWhite),
                 onChanged: (value) {
-                  BlocProvider.of<SearchBloc>(context).add(
-                    SearchEvent.searchMovie(
-                      moieQuery: value,
-                    ),
-                  );
+                  if (value.isEmpty) {
+                    return;
+                  }
+                  _debouncer.run(() {
+                    BlocProvider.of<SearchBloc>(context).add(
+                      SearchEvent.searchMovie(
+                        moieQuery: value,
+                      ),
+                    );
+                  });
                 },
               ),
               kHeight,
               Expanded(
-                child: SearchIdle(),
+                child: BlocBuilder<SearchBloc, SearchState>(
+                  builder: (context, state) {
+                    return state.searchResultList.isEmpty
+                        ? const SearchIdle()
+                        : const SearchResults();
+                  },
+                ),
               )
             ],
           ),

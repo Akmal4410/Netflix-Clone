@@ -1,11 +1,10 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:netflix_project/core/constant_strings.dart';
 part 'search_response.g.dart';
 
 @JsonSerializable()
 class SearchResponse {
   @JsonKey(name: 'results')
-  List<SearchResultData>? results;
+  List<SearchResultData> results;
 
   SearchResponse({this.results = const []});
 

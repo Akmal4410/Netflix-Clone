@@ -42,7 +42,7 @@ class Section2 extends StatelessWidget {
               height: size.width,
               // color: kWhite,
               child: state.isLoading
-                  ? const CircularProgressIndicator()
+                  ? const Center(child: CircularProgressIndicator())
                   : Stack(
                       alignment: Alignment.center,
                       children: [
