@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:netflix_project/core/colors.dart';
 
 class VideoWidget extends StatelessWidget {
+  final String image;
   const VideoWidget({
     Key? key,
+    required this.image,
   }) : super(key: key);
 
   @override
@@ -11,10 +13,24 @@ class VideoWidget extends StatelessWidget {
     return Stack(
       children: [
         Image.network(
-          'https://www.themoviedb.org/t/p/w500_and_h282_face/piEEg5kDQyxK05V4Am8sVxFe267.jpg',
+          image,
           fit: BoxFit.cover,
           height: 170,
           width: double.infinity,
+          loadingBuilder: (context, child, loadingProgress) {
+            if (loadingProgress == null) {
+              return child;
+            } else {
+              return Center(child: CircularProgressIndicator());
+            }
+          },
+          errorBuilder: (context, error, trace) {
+            return const Center(
+                child: Icon(
+              Icons.wifi,
+              color: Colors.white,
+            ));
+          },
         ),
         Positioned(
           bottom: 10,
@@ -24,7 +40,7 @@ class VideoWidget extends StatelessWidget {
             radius: 22,
             child: IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.volume_off,
                 color: kWhite,
                 size: 20,

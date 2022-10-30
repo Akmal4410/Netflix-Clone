@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:netflix_project/application/downloads/downloads_bloc.dart';
+import 'package:netflix_project/application/fastlaugh/fast_laugh_bloc.dart';
+import 'package:netflix_project/application/home/home_bloc.dart';
+import 'package:netflix_project/application/new_and_hot/new_and_hot_bloc.dart';
 import 'package:netflix_project/application/search/search_bloc.dart';
 import 'package:netflix_project/core/colors.dart';
 import 'package:netflix_project/domain/core/dependency_injection/injectable.dart';
@@ -21,7 +24,10 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => getIt<DownloadsBloc>()),
-        BlocProvider(create: (context) => getIt<SearchBloc>())
+        BlocProvider(create: (context) => getIt<SearchBloc>()),
+        BlocProvider(create: (context) => getIt<FastLaughBloc>()),
+        BlocProvider(create: (context) => getIt<HomeBloc>()),
+        BlocProvider(create: (context) => getIt<NewAndHotBloc>()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

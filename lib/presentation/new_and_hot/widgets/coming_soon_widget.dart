@@ -5,8 +5,21 @@ import 'package:netflix_project/presentation/new_and_hot/widgets/video_widget.da
 import 'package:netflix_project/presentation/widget/custom_button.dart';
 
 class ComingSoonWidget extends StatelessWidget {
+  final String id;
+  final String month;
+  final String day;
+  final String movieName;
+  final String posterPath;
+  final String description;
+
   const ComingSoonWidget({
     Key? key,
+    required this.id,
+    required this.month,
+    required this.day,
+    required this.movieName,
+    required this.description,
+    required this.posterPath,
   }) : super(key: key);
 
   @override
@@ -19,12 +32,12 @@ class ComingSoonWidget extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                'FEB',
+                month,
                 style: kTextStyle.copyWith(color: kGrey),
               ),
-              const Text(
-                '11',
-                style: TextStyle(
+              Text(
+                day,
+                style: const TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 4),
@@ -40,39 +53,50 @@ class ComingSoonWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                VideoWidget(),
+                VideoWidget(image: posterPath),
                 Row(
-                  children: const [
-                    Text(
-                      'TALL GIRL 2',
-                      style: TextStyle(
-                        letterSpacing: -5,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        movieName,
+                        maxLines: 1,
+                        overflow: TextOverflow.clip,
+                        style: const TextStyle(
+                          letterSpacing: -5,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                    Spacer(),
-                    CustomButton(
-                      title: 'Remind Me',
-                      icon: Icons.notifications,
-                      titleSize: 14,
-                      iconSize: 20,
-                    ),
-                    CustomButton(
-                      title: 'Info',
-                      icon: Icons.info,
-                      titleSize: 14,
-                      iconSize: 20,
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: const [
+                          CustomButton(
+                            title: 'Remind Me',
+                            icon: Icons.notifications,
+                            titleSize: 14,
+                            iconSize: 20,
+                          ),
+                          CustomButton(
+                            title: 'Info',
+                            icon: Icons.info,
+                            titleSize: 14,
+                            iconSize: 20,
+                          ),
+                        ],
+                      ),
                     ),
                     kWidth,
                   ],
                 ),
-                Text('Coming on Friday'),
+                Text('Coming on $month $day'),
                 kHeight,
-                Text('Tall Girl', style: kTextStyle),
+                Text(movieName, style: kTextStyle),
                 kHeight,
                 Text(
-                  '''ley of type and scrambled it to make a type specimen book. Itronic typesetting, remaining essentially unchanged. sheets c Aldus PageMaker including versions of Lorem Ipsum''',
+                  description,
                   style: TextStyle(color: kGrey),
                 )
               ],

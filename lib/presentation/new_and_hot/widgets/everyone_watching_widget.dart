@@ -5,8 +5,14 @@ import 'package:netflix_project/presentation/new_and_hot/widgets/video_widget.da
 import 'package:netflix_project/presentation/widget/custom_button.dart';
 
 class EveryoneWatchingWidget extends StatelessWidget {
+  final String movieName;
+  final String posterPath;
+  final String description;
   const EveryoneWatchingWidget({
     Key? key,
+    required this.movieName,
+    required this.posterPath,
+    required this.description,
   }) : super(key: key);
 
   @override
@@ -16,19 +22,21 @@ class EveryoneWatchingWidget extends StatelessWidget {
       children: [
         kHeight,
         Text(
-          'Friends',
-          style: TextStyle(
+          movieName,
+          style: const TextStyle(
             fontSize: 17,
             fontWeight: FontWeight.bold,
           ),
         ),
         kHeight,
         Text(
-          '''ley of type and scrambled it to make a type specimen book. Itronic typesetting, remaining essentially unchanged. sheets c Aldus PageMaker including versions of Lorem Ipsum''',
-          style: TextStyle(color: kGrey),
+          description,
+          style: const TextStyle(color: kGrey),
         ),
         SizedBox(height: 40),
-        VideoWidget(),
+        VideoWidget(
+          image: posterPath,
+        ),
         kHeight,
         Row(
           mainAxisAlignment: MainAxisAlignment.end,

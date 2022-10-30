@@ -10,7 +10,7 @@ class DownloadsState with _$DownloadsState {
   }) = _DownloadsState;
 
   factory DownloadsState.initial() {
-    return DownloadsState(
+    return const DownloadsState(
       isLoading: false,
       downloadsFailureOrSuccessOption: None(),
       downloads: [],
