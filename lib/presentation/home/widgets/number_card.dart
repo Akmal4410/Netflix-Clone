@@ -7,10 +7,12 @@ class NumberCard extends StatelessWidget {
     Key? key,
     required this.size,
     required this.index,
+    required this.posterPath,
   }) : super(key: key);
 
   final Size size;
   final int index;
+  final String posterPath;
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +24,8 @@ class NumberCard extends StatelessWidget {
           height: size.width * 0.55,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            image: const DecorationImage(
-              image: NetworkImage(''),
+            image: DecorationImage(
+              image: NetworkImage(posterPath),
               fit: BoxFit.cover,
             ),
           ),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class MainCard extends StatelessWidget {
+  final String imageUrl;
   const MainCard({
     Key? key,
     required this.imageUrl,
   }) : super(key: key);
-  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {

@@ -18,33 +18,33 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() initializeHome,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? initializeHome,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? initializeHome,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(InitializeHome value) initializeHome,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(InitializeHome value)? initializeHome,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(InitializeHome value)? initializeHome,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -68,34 +68,35 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+abstract class _$$InitializeHomeCopyWith<$Res> {
+  factory _$$InitializeHomeCopyWith(
+          _$InitializeHome value, $Res Function(_$InitializeHome) then) =
+      __$$InitializeHomeCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$_Started>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
+class __$$InitializeHomeCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$InitializeHome>
+    implements _$$InitializeHomeCopyWith<$Res> {
+  __$$InitializeHomeCopyWithImpl(
+      _$InitializeHome _value, $Res Function(_$InitializeHome) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$InitializeHome implements InitializeHome {
+  const _$InitializeHome();
 
   @override
   String toString() {
-    return 'HomeEvent.started()';
+    return 'HomeEvent.initializeHome()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Started);
+        (other.runtimeType == runtimeType && other is _$InitializeHome);
   }
 
   @override
@@ -104,27 +105,27 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() initializeHome,
   }) {
-    return started();
+    return initializeHome();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? initializeHome,
   }) {
-    return started?.call();
+    return initializeHome?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? initializeHome,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (initializeHome != null) {
+      return initializeHome();
     }
     return orElse();
   }
@@ -132,69 +133,53 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(InitializeHome value) initializeHome,
   }) {
-    return started(this);
+    return initializeHome(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(InitializeHome value)? initializeHome,
   }) {
-    return started?.call(this);
+    return initializeHome?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(InitializeHome value)? initializeHome,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (initializeHome != null) {
+      return initializeHome(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements HomeEvent {
-  const factory _Started() = _$_Started;
+abstract class InitializeHome implements HomeEvent {
+  const factory InitializeHome() = _$InitializeHome;
 }
 
 /// @nodoc
 mixin _$HomeState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) =>
+  String get stateId => throw _privateConstructorUsedError;
+  List<HotAndNewData> get pastYearMovieList =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-  }) =>
+  List<HotAndNewData> get trendingMovieList =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) =>
+  List<HotAndNewData> get trendingTvList => throw _privateConstructorUsedError;
+  List<HotAndNewData> get tenseDramasMovieList =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) =>
+  List<HotAndNewData> get southIndiaMovieList =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) =>
+  bool get isLoading => throw _privateConstructorUsedError;
+  bool get isError => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $HomeStateCopyWith<HomeState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -202,6 +187,16 @@ mixin _$HomeState {
 abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res, HomeState>;
+  @useResult
+  $Res call(
+      {String stateId,
+      List<HotAndNewData> pastYearMovieList,
+      List<HotAndNewData> trendingMovieList,
+      List<HotAndNewData> trendingTvList,
+      List<HotAndNewData> tenseDramasMovieList,
+      List<HotAndNewData> southIndiaMovieList,
+      bool isLoading,
+      bool isError});
 }
 
 /// @nodoc
@@ -213,99 +208,265 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? stateId = null,
+    Object? pastYearMovieList = null,
+    Object? trendingMovieList = null,
+    Object? trendingTvList = null,
+    Object? tenseDramasMovieList = null,
+    Object? southIndiaMovieList = null,
+    Object? isLoading = null,
+    Object? isError = null,
+  }) {
+    return _then(_value.copyWith(
+      stateId: null == stateId
+          ? _value.stateId
+          : stateId // ignore: cast_nullable_to_non_nullable
+              as String,
+      pastYearMovieList: null == pastYearMovieList
+          ? _value.pastYearMovieList
+          : pastYearMovieList // ignore: cast_nullable_to_non_nullable
+              as List<HotAndNewData>,
+      trendingMovieList: null == trendingMovieList
+          ? _value.trendingMovieList
+          : trendingMovieList // ignore: cast_nullable_to_non_nullable
+              as List<HotAndNewData>,
+      trendingTvList: null == trendingTvList
+          ? _value.trendingTvList
+          : trendingTvList // ignore: cast_nullable_to_non_nullable
+              as List<HotAndNewData>,
+      tenseDramasMovieList: null == tenseDramasMovieList
+          ? _value.tenseDramasMovieList
+          : tenseDramasMovieList // ignore: cast_nullable_to_non_nullable
+              as List<HotAndNewData>,
+      southIndiaMovieList: null == southIndiaMovieList
+          ? _value.southIndiaMovieList
+          : southIndiaMovieList // ignore: cast_nullable_to_non_nullable
+              as List<HotAndNewData>,
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isError: null == isError
+          ? _value.isError
+          : isError // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
+abstract class _$$_HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory _$$_HomeStateCopyWith(
+          _$_HomeState value, $Res Function(_$_HomeState) then) =
+      __$$_HomeStateCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String stateId,
+      List<HotAndNewData> pastYearMovieList,
+      List<HotAndNewData> trendingMovieList,
+      List<HotAndNewData> trendingTvList,
+      List<HotAndNewData> tenseDramasMovieList,
+      List<HotAndNewData> southIndiaMovieList,
+      bool isLoading,
+      bool isError});
 }
 
 /// @nodoc
-class __$$_InitialCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$_Initial>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+class __$$_HomeStateCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$_HomeState>
+    implements _$$_HomeStateCopyWith<$Res> {
+  __$$_HomeStateCopyWithImpl(
+      _$_HomeState _value, $Res Function(_$_HomeState) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? stateId = null,
+    Object? pastYearMovieList = null,
+    Object? trendingMovieList = null,
+    Object? trendingTvList = null,
+    Object? tenseDramasMovieList = null,
+    Object? southIndiaMovieList = null,
+    Object? isLoading = null,
+    Object? isError = null,
+  }) {
+    return _then(_$_HomeState(
+      stateId: null == stateId
+          ? _value.stateId
+          : stateId // ignore: cast_nullable_to_non_nullable
+              as String,
+      pastYearMovieList: null == pastYearMovieList
+          ? _value._pastYearMovieList
+          : pastYearMovieList // ignore: cast_nullable_to_non_nullable
+              as List<HotAndNewData>,
+      trendingMovieList: null == trendingMovieList
+          ? _value._trendingMovieList
+          : trendingMovieList // ignore: cast_nullable_to_non_nullable
+              as List<HotAndNewData>,
+      trendingTvList: null == trendingTvList
+          ? _value._trendingTvList
+          : trendingTvList // ignore: cast_nullable_to_non_nullable
+              as List<HotAndNewData>,
+      tenseDramasMovieList: null == tenseDramasMovieList
+          ? _value._tenseDramasMovieList
+          : tenseDramasMovieList // ignore: cast_nullable_to_non_nullable
+              as List<HotAndNewData>,
+      southIndiaMovieList: null == southIndiaMovieList
+          ? _value._southIndiaMovieList
+          : southIndiaMovieList // ignore: cast_nullable_to_non_nullable
+              as List<HotAndNewData>,
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isError: null == isError
+          ? _value.isError
+          : isError // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$_HomeState implements _HomeState {
+  const _$_HomeState(
+      {required this.stateId,
+      required final List<HotAndNewData> pastYearMovieList,
+      required final List<HotAndNewData> trendingMovieList,
+      required final List<HotAndNewData> trendingTvList,
+      required final List<HotAndNewData> tenseDramasMovieList,
+      required final List<HotAndNewData> southIndiaMovieList,
+      required this.isLoading,
+      required this.isError})
+      : _pastYearMovieList = pastYearMovieList,
+        _trendingMovieList = trendingMovieList,
+        _trendingTvList = trendingTvList,
+        _tenseDramasMovieList = tenseDramasMovieList,
+        _southIndiaMovieList = southIndiaMovieList;
+
+  @override
+  final String stateId;
+  final List<HotAndNewData> _pastYearMovieList;
+  @override
+  List<HotAndNewData> get pastYearMovieList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_pastYearMovieList);
+  }
+
+  final List<HotAndNewData> _trendingMovieList;
+  @override
+  List<HotAndNewData> get trendingMovieList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_trendingMovieList);
+  }
+
+  final List<HotAndNewData> _trendingTvList;
+  @override
+  List<HotAndNewData> get trendingTvList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_trendingTvList);
+  }
+
+  final List<HotAndNewData> _tenseDramasMovieList;
+  @override
+  List<HotAndNewData> get tenseDramasMovieList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_tenseDramasMovieList);
+  }
+
+  final List<HotAndNewData> _southIndiaMovieList;
+  @override
+  List<HotAndNewData> get southIndiaMovieList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_southIndiaMovieList);
+  }
+
+  @override
+  final bool isLoading;
+  @override
+  final bool isError;
 
   @override
   String toString() {
-    return 'HomeState.initial()';
+    return 'HomeState(stateId: $stateId, pastYearMovieList: $pastYearMovieList, trendingMovieList: $trendingMovieList, trendingTvList: $trendingTvList, tenseDramasMovieList: $tenseDramasMovieList, southIndiaMovieList: $southIndiaMovieList, isLoading: $isLoading, isError: $isError)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
+        (other.runtimeType == runtimeType &&
+            other is _$_HomeState &&
+            (identical(other.stateId, stateId) || other.stateId == stateId) &&
+            const DeepCollectionEquality()
+                .equals(other._pastYearMovieList, _pastYearMovieList) &&
+            const DeepCollectionEquality()
+                .equals(other._trendingMovieList, _trendingMovieList) &&
+            const DeepCollectionEquality()
+                .equals(other._trendingTvList, _trendingTvList) &&
+            const DeepCollectionEquality()
+                .equals(other._tenseDramasMovieList, _tenseDramasMovieList) &&
+            const DeepCollectionEquality()
+                .equals(other._southIndiaMovieList, _southIndiaMovieList) &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
+            (identical(other.isError, isError) || other.isError == isError));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(
+      runtimeType,
+      stateId,
+      const DeepCollectionEquality().hash(_pastYearMovieList),
+      const DeepCollectionEquality().hash(_trendingMovieList),
+      const DeepCollectionEquality().hash(_trendingTvList),
+      const DeepCollectionEquality().hash(_tenseDramasMovieList),
+      const DeepCollectionEquality().hash(_southIndiaMovieList),
+      isLoading,
+      isError);
 
+  @JsonKey(ignore: true)
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
+  @pragma('vm:prefer-inline')
+  _$$_HomeStateCopyWith<_$_HomeState> get copyWith =>
+      __$$_HomeStateCopyWithImpl<_$_HomeState>(this, _$identity);
 }
 
-abstract class _Initial implements HomeState {
-  const factory _Initial() = _$_Initial;
+abstract class _HomeState implements HomeState {
+  const factory _HomeState(
+      {required final String stateId,
+      required final List<HotAndNewData> pastYearMovieList,
+      required final List<HotAndNewData> trendingMovieList,
+      required final List<HotAndNewData> trendingTvList,
+      required final List<HotAndNewData> tenseDramasMovieList,
+      required final List<HotAndNewData> southIndiaMovieList,
+      required final bool isLoading,
+      required final bool isError}) = _$_HomeState;
+
+  @override
+  String get stateId;
+  @override
+  List<HotAndNewData> get pastYearMovieList;
+  @override
+  List<HotAndNewData> get trendingMovieList;
+  @override
+  List<HotAndNewData> get trendingTvList;
+  @override
+  List<HotAndNewData> get tenseDramasMovieList;
+  @override
+  List<HotAndNewData> get southIndiaMovieList;
+  @override
+  bool get isLoading;
+  @override
+  bool get isError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_HomeStateCopyWith<_$_HomeState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
